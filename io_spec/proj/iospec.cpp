@@ -79,6 +79,7 @@ namespace iospecns {
 
                   invarFile.open("invar.txt");
                   if(!invarFile) {
+                    errs() << "Line #82\n";
                     errs() << "Cannot open input file.\n";
                     return 1;
                   }
@@ -164,6 +165,7 @@ namespace iospecns {
 
                   invarFile.open("invar.txt");
                   if(!invarFile) {
+                    errs() << "Line #168\n";
                     errs() << "Cannot open input file.\n";
                     return 1;
                   }
