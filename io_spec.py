@@ -19,7 +19,7 @@ if("daikon-output" not in os.listdir(bcdir)):
 	os.system("mkdir daikon-output")
 
 # #clang compile custom IO call wrapper file
-os.system("clang -c -emit-llvm "+invdir+"/dtrace_gen/io_wrappers.c")
+os.system("clang-5.0 -c -emit-llvm "+invdir+"/dtrace_gen/io_wrappers.c")
 
 # #link app's .bc file with io_wrapper.bc
 os.system("llvm-link io_wrappers.bc "+app_bc+" -S -o=app1.bc")
