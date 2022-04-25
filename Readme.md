@@ -25,14 +25,14 @@ file_lift \
 dtrace_gen 
 
 # Install dependencies for daikon
-sudo apt-get install default-jre\
-sudo apt-get install default-jdk\
-sudo apt-get install graphviz\
-sudo apt-get install autotools-dev\
-sudo apt-get install automake\
-sudo apt-get install libz-dev\
-sudo apt-get install binutils-dev
-
+sudo apt-get install default-jre -y\
+sudo apt-get install default-jdk -y\
+sudo apt-get install graphviz -y\
+sudo apt-get install autotools-dev -y\
+sudo apt-get install automake -y\
+sudo apt-get install libz-dev -y\
+sudo apt-get install binutils-dev -y \
+sudo apt-get install netpbm -y 
 # Install textinfo
 wget http://ftp.gnu.org/gnu/texinfo/texinfo-6.8.tar.xz
 
@@ -45,6 +45,7 @@ sudo ln -s /usr/local/texinfo/6_6/bin/makeinfo /usr/local/bin/
 # Download Daikon5.8.0
 wget https://plse.cs.washington.edu/daikon/history/daikon-5.8.0/daikon-5.8.0.tar.gz \
 Untar it in a directory as specified in daikon install docs and follow the process on the website\
+Make sure to change pathname in process to appropriate daikon version \
 Before running make -C $DAIKONDIR rebuild-everything\
 Go to the file daikon-5.8.0/doc/Makefile and coment the following lines \
 ${HTMLTOOLS}/html-add-favicon daikon ../daikon-favicon.png \
