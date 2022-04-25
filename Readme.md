@@ -36,15 +36,15 @@ sudo apt-get install binutils-dev\
 # Install textinfo
 wget http://ftp.gnu.org/gnu/texinfo/texinfo-6.8.tar.xz
 
-# Untair it and then in the textinfo directory run
-./configure --prefix=/usr/local/texinfo/6_6
-make
-sudo make install
-sudo ln -s /usr/local/texinfo/6_6/bin/makeinfo /usr/local/bin/
+## Untair it and then in the textinfo directory run
+./configure --prefix=/usr/local/texinfo/6_6 \
+make \
+sudo make install \
+sudo ln -s /usr/local/texinfo/6_6/bin/makeinfo /usr/local/bin/ \
 
 # Download Daikon5.8.0
 wget https://plse.cs.washington.edu/daikon/history/daikon-5.8.0/daikon-5.8.0.tar.gz \
-Untar it in a directory as specified in daikon install docs and follow the process on the website. Before running make -C $DAIKONDIR rebuild-everything, Go to the file daikon-5.8.0/doc/Makefile and coment the following lines \
+Untar it in a directory as specified in daikon install docs and follow the process on the website.\ Before running make -C $DAIKONDIR rebuild-everything\ Go to the file daikon-5.8.0/doc/Makefile and coment the following lines \
 ${HTMLTOOLS}/html-add-favicon daikon ../daikon-favicon.png \
 #${HTMLTOOLS}/html-add-favicon developer ../daikon-favicon.png\
 
